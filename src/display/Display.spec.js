@@ -13,7 +13,7 @@ test('If closed prop is true then gate is closed and in red color', () => {
 
   // console.log("This is in Display.js file and 2nd test and component is:",component);
   const { getByText } = component;  
-  getByText("Closed");
+  const closedBtn = getByText("Closed");
 
   // console.log("The component.childElementCount",component.childElementCount);
   // console.log("outputA:",component.container.firstChild);
@@ -23,6 +23,7 @@ test('If closed prop is true then gate is closed and in red color', () => {
   // console.log("outputE:",component.container.firstChild.childNodes[1]);
   // console.log("outputF:",component.container.firstChild.childNodes[1].className);
   expect(component.container.firstChild.childNodes[1].className).toBe("led red-led");
+  expect(closedBtn.className).toBe("led red-led");
   
 });
 
